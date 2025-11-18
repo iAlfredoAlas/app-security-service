@@ -3,6 +3,7 @@ package biz.utilsdev.security.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.Instant;
 
@@ -15,6 +16,9 @@ import java.time.Instant;
 @Table(name = "permission", schema = "security")
 public class Permission implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = 1L;
+    
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false, updatable = false)
